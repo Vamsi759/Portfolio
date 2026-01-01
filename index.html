@@ -355,6 +355,39 @@
                 /* Centers it on mobile */
             }
         }
+
+        /* Container for the logo inside the card */
+        .profile-logo {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 15px;
+            /* Centers logo and adds space below */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            /* White background makes logos pop */
+            padding: 10px;
+            border-radius: 12px;
+        }
+
+        /* Automatic image sizing */
+        .profile-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            /* Ensures logo isn't cut off */
+        }
+
+        /* Enhancement for the profile card text */
+        .profile-card h4 {
+            margin: 10px 0;
+        }
+
+        .profile-card p b {
+            color: var(--primary);
+            /* Highlights your stats */
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -373,7 +406,7 @@
             <li><a href="#Coding">Coding</a></li>
             <li><a href="#Education">Education</a></li>
             <li><a href="#Contact">Contact</a></li>
-            <li><a href="#" class="btn">Resume</a></li>
+            <!-- <li><a href="#" class="btn">Resume</a></li> -->
         </ul>
     </nav>
 
@@ -399,14 +432,20 @@
     <section id="Projects">
         <h1 id="title">My Projects</h1>
         <p>A selection of my technical work spanning backend systems and hardware integration.</p>
-        <div class="grid">
+        <!--div class="grid">
+
+            
+
             <div class="card">
                 <div class="card-body">
                     <h4>Student Management System</h4>
-                    <p class="text-secondary" style="font-size: 0.8rem; margin-bottom: 10px;">Spring Boot • JPA •
-                        PostgreSQL</p>
-                    <p class="text-secondary">Developed a CRUD REST API with service layer validation and PostgreSQL
-                        integration.</p>
+                     <p class="text-secondary">Spring Boot • JPA •
+                        PostgreSQL --</p>
+                        <p class="text-secondary" style="font-size: 0.8rem; margin-bottom: 10px;">Built full CRUD REST APIs using Spring Boot</p>
+                        <p class="text-secondary" style="font-size: 0.8rem; margin-bottom: 10px;">Implemented validations & global exception handling</p>
+                        <p class="text-secondary" style="font-size: 0.8rem; margin-bottom: 10px;">Designed React UI for student registration</p>
+                        <p class="text-secondary" style="font-size: 0.8rem; margin-bottom: 10px;">Tested APIs using Postman ,Integrated PostgreSQL & wrote SQL scripts</p>
+                
                 </div>
             </div>
             <div class="card">
@@ -430,6 +469,56 @@
                     <p class="text-secondary" style="font-size: 0.8rem; margin-bottom: 10px;">HTML • CSS • JS</p>
                     <p class="text-secondary">A fully responsive modern design to showcase professional achievements.
                     </p>
+                </div>
+            </div>
+        </div-->
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Student Management System</h4>
+                    <p class="text-secondary"
+                        style="font-size: 0.8rem; font-weight: bold; color: var(--primary); margin-bottom: 10px;">
+                        React • Spring Boot • JPA • PostgreSQL
+                    </p>
+                    <ul class="text-secondary" style="font-size: 0.8rem; padding-left: 15px; margin: 0;">
+                        <li>Built full CRUD REST APIs using Spring Boot</li>
+                        <li>Implemented validations & global exception handling</li>
+                        <li>Designed React UI for student registration</li>
+                        <li>Tested APIs using Postman & wrote SQL scripts</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h4>AI ChatBot</h4>
+                    <p class="text-secondary"
+                        style="font-size: 0.8rem; font-weight: bold; color: var(--primary); margin-bottom: 10px;">
+                        React • Spring Boot • OpenAI • PostgreSQL
+                    </p>
+                    <ul class="text-secondary" style="font-size: 0.8rem; padding-left: 15px; margin: 0;">
+                        <li>Implemented AI messaging interface with history</li>
+                        <li>Designed backend endpoints for chat storage</li>
+                        <li>Integrated OpenAI API for intelligent responses</li>
+                        <li>Built responsive UI using React hooks</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h4>Pen Plotter Machine</h4>
+                    <p class="text-secondary"
+                        style="font-size: 0.8rem; font-weight: bold; color: var(--primary); margin-bottom: 10px;">
+                        Arduino • GRBL • Inkscape • IoT
+                    </p>
+                    <ul class="text-secondary" style="font-size: 0.8rem; padding-left: 15px; margin: 0;">
+                        <li>Automated image-to-plot conversion process</li>
+                        <li>Controlled servo/stepper motors via Arduino</li>
+                        <li>Configured GRBL firmware for precision drawing</li>
+                        <li>Integrated hardware with software G-code</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -474,16 +563,18 @@
     <section id="Coding">
         <h1 id="title">Coding Profiles</h1>
         <div class="grid">
-            <div class="profile-card">
-                <i class="fa-brands fa-leetcode"></i>
+            <!-- <div class="profile-card">
+                <i class="fa-solid fa-code"></i>
                 <h4>LeetCode</h4>
                 <p>Solving DSA Challenges</p>
+                <p>250+ Problems Solved</p>
                 <a href="https://leetcode.com/u/krishna_vamsi_katta/" target="_blank" class="btn">View Profile</a>
             </div>
             <div class="profile-card">
                 <i class="fa-solid fa-code"></i>
                 <h4>Geeks For Geeks</h4>
                 <p>Technical Practice</p>
+                <p>500+ Problems Solved</p>
                 <a href="https://www.geeksforgeeks.org/profile/kirshna_vamsi?tab=activity" target="_blank"
                     class="btn">View Profile</a>
             </div>
@@ -491,7 +582,42 @@
                 <i class="fa-brands fa-hackerrank"></i>
                 <h4>HackerRank</h4>
                 <p>Skill Verification</p>
+                <p>5 Star in Problem Solving</p>
                 <a href="https://www.hackerrank.com/profile/20MH1A4920" target="_blank" class="btn">View Profile</a>
+            </div> -->
+            <div class="grid">
+                <div class="profile-card">
+                    <div class="profile-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+                            alt="LeetCode">
+                    </div>
+                    <h4>LeetCode</h4>
+                    <p>Solving DSA Challenges</p>
+                    <p><b>250+ Problems Solved</b></p>
+                    <a href="https://leetcode.com/u/krishna_vamsi_katta/" target="_blank" class="btn">View Profile</a>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-logo">
+                        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png" alt="GFG">
+                    </div>
+                    <h4>Geeks For Geeks</h4>
+                    <p>Technical Practice</p>
+                    <p><b>500+ Problems Solved</b></p>
+                    <a href="https://www.geeksforgeeks.org/profile/kirshna_vamsi?tab=activity" target="_blank"
+                        class="btn">View Profile</a>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png"
+                            alt="HackerRank">
+                    </div>
+                    <h4>HackerRank</h4>
+                    <p>Skill Verification</p>
+                    <p><b>5 Star in Problem Solving</b></p>
+                    <a href="https://www.hackerrank.com/profile/20MH1A4920" target="_blank" class="btn">View Profile</a>
+                </div>
             </div>
         </div>
     </section>
@@ -521,8 +647,8 @@
         </div>
         <div>
             <h3>Social</h3>
-            <a href="#" class="footer-link">LinkedIn</a>
-            <a href="#" class="footer-link">GitHub</a>
+            <a href="https://www.linkedin.com/in/krishna-vamsi-katta-0717ab247/" class="footer-link">LinkedIn</a>
+            <a href="https://github.com/Vamsi759" class="footer-link">GitHub</a>
         </div>
     </footer>
 
